@@ -1,0 +1,142 @@
+
+header{
+  width: 100%;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i{
+  color: $white-normal;
+}
+
+.header-icons{
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover{
+  i{
+    animation: translateY 0.8s infinite alternate;
+    color: $red-light;
+  }
+}
+
+@keyframes translateY {
+  from{
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+
+.header-button{
+  border: 1px solid $white-normal;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: $white-normal;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover{
+  border: 1px solid $red-light;
+  background-color: $red-light;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+
+  img {
+    border: 4px solid #d18f44; // Cor dourada
+    border-radius: 50%; // Para criar um círculo
+    padding: 8px; // Espaçamento interno
+    box-sizing: border-box; // Inclui as bordas no tamanho total
+    width: 600px; // Ajuste o tamanho conforme necessário
+    height: 600px; // Ajuste o tamanho conforme necessário
+    box-sizing: border-box; // Inclui as bordas no tamanho total
+  }
+}
+
+.footer-logo {
+    border: 4px solid #d18f44; // Cor dourada
+    border-radius: 50%; // Para criar um círculo
+    padding: 8px; // Espaçamento interno
+    width: 200px; // Ajuste o tamanho conforme necessário
+    height: 200px; // Ajuste o tamanho conforme necessário
+    box-sizing: border-box; // Inclui as bordas no tamanho total
+}
+
+@media screen and (max-width: 768px){
+  .header-content{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    i{
+      margin-top: 16px;
+      font-size: 34px;
+    }
+  }
+
+
+  .header-logo img{
+    width: 160px;
+    margin-top: 46px;
+  }
+
+  .header-button{
+    display: none;
+  }
+
+}
+
+.header-icons button {
+  border: 1px solid #fff; /* Cor da borda branca */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 4px; /* Borda arredondada */
+  color: #fff; /* Cor do texto branca */
+  background-color: transparent; /* Fundo transparente */
+  transition: background-color 0.8s, border-color 0.8s, color 0.8s; /* Transição suave */
+
+  &:hover {
+    background-color: #ffd700; /* Cor de fundo dourada ao passar o mouse */
+    border-color: #ffd700; /* Cor da borda dourada ao passar o mouse */
+    color: #000; /* Cor do texto preta ao passar o mouse */
+  }
+}
+
+/* Adicione este estilo se quiser ajustar o espaçamento entre os botões */
+.header-icons a:not(:last-child) button {
+  margin-right: 15px;
+}
+
+/* Adicione este estilo se quiser centralizar verticalmente os botões */
+.header-icons button {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .header-logo img{
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+    i{
+      margin-top: 16px;
+      font-size: 34px;
+    }
+  }
+
